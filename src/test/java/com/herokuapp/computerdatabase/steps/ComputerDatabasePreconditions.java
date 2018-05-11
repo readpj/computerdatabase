@@ -11,6 +11,6 @@ public class ComputerDatabasePreconditions {
 
     @Given("^I want to add a new computer to the database$")
     public void iWantToAddANewComputerToTheDatabase() throws Throwable {
-        pages.homePage().getComputersFoundText();
+        System.out.println(pages.homePage().getComputersFoundText());
     }
 }

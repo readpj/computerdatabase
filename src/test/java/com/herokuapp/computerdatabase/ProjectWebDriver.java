@@ -24,6 +24,9 @@ public class ProjectWebDriver {
         });
     }
 
+    @Value("${baseURL}")
+    private String baseURL;
+
     @Value("${browser}")
     private String browser;
 
@@ -44,6 +47,7 @@ public class ProjectWebDriver {
             webDriver = new ChromeDriver();
         }
         webDriver.manage().window().maximize();
+        webDriver.get(baseURL);
     }
 
     public final WebDriver getWebDriver() {
