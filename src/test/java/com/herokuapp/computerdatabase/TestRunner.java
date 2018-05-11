@@ -21,18 +21,18 @@ import static org.apache.log4j.helpers.LogLog.error;
 @Slf4j
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        glue = ("com/herokuapp/theinternet/steps"),
-        features = {"src/test/resources/com.herokuapp.theinternet"},
-        tags = "@form_authentication,@data_tables,@forgot_password,@key_presses,@drop_down",
+        glue = ("com/herokuapp/computerdatabase/steps"),
+        features = {"src/test/resources/com.herokuapp.computerdatabase"},
+        tags = "@create_computer",
         plugin = {
                 "pretty",
-                "com.cucumber.listener.ExtentCucumberFormatter:output/the-internet/Report.html",
+                "com.cucumber.listener.ExtentCucumberFormatter:output/computer-database/Report.html",
                 "json:target/cucumber.json"
         }
 )
 
 public class TestRunner {
-    private static final String REPORT_LOCATION = "output/the-internet/";
+    private static final String REPORT_LOCATION = "output/computer-database/";
 
     @BeforeClass
     public static void setUp() {
@@ -46,7 +46,7 @@ public class TestRunner {
         loadConfig(new File("src/test/resources/extent-config.xml"));
 
         Map<String, String> systemInfo = new HashMap<String, String>();
-        systemInfo.put("Project", "The Internet");
+        systemInfo.put("Project", "Computer Database");
         systemInfo.put("Cucumber version", "v1.2.3");
         systemInfo.put("Extent Cucumber Reporter version", "v1.1.0");
         addSystemInfo(systemInfo);
