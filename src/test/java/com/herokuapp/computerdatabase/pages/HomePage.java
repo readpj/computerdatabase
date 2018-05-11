@@ -6,14 +6,15 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends BasePage {
 
     private static final By ADD_COMPUTER_BUTTON = By.id("add");
-    private static final By FILTER_BY_NAME_BUTTON = By.id("submit");
+    private static final By FILTER_BY_NAME_BUTTON = By.id("searchsubmit");
     private static final By SEARCH_BOX_INPUT = By.id("searchbox");
     private static final By COMPUTERS_FOUND_HEADER = By.cssSelector("#main > h1");
     private static final By ALERT_MESSAGE = By.cssSelector("#.alert-message.warning");
 
-    public HomePage(WebDriver webDriver, String baseURL) {
+//    public HomePage(WebDriver webDriver, String baseURL) {
+    public HomePage(WebDriver webDriver) {
         super(webDriver);
-        webDriver.get(baseURL);
+//        webDriver.get(baseURL);
     }
 
     public String getComputersFoundText() {

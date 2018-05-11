@@ -14,8 +14,6 @@ public class BasePage {
 
     protected static final String PAGE_HEADING_IDENTIFIER = ".example>h3";
     private static final String SECTION_HEADING_XPATH = "//h1[contains(text(), '%s')]";
-//    private static final String SECTION_HEADING_TWO_XPATH = "//h2[contains(text(), '%s')]";
-
 
     public BasePage(WebDriver driver) {
         this.webDriver = driver;
