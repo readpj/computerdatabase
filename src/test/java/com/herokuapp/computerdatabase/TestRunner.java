@@ -23,7 +23,7 @@ import static org.apache.log4j.helpers.LogLog.error;
 @CucumberOptions(
         glue = ("com/herokuapp/computerdatabase/steps"),
         features = {"src/test/resources/com.herokuapp.computerdatabase"},
-        tags = "@create_computer",
+        tags = "@create_computer, @delete_computer, @read_computer, @update_computer",
         plugin = {
                 "pretty",
                 "com.cucumber.listener.ExtentCucumberFormatter:output/computer-database/Report.html",
