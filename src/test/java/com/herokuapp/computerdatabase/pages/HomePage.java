@@ -9,12 +9,11 @@ public class HomePage extends BasePage {
     private static final By FILTER_BY_NAME_BUTTON = By.id("searchsubmit");
     private static final By SEARCH_BOX_INPUT = By.id("searchbox");
     private static final By COMPUTERS_FOUND_HEADER = By.cssSelector("#main > h1");
-    private static final By ALERT_MESSAGE = By.cssSelector("#.alert-message.warning");
+    private static final By ALERT_MESSAGE = By.cssSelector(".alert-message.warning");
+    private static final By PLAY_APPLICATION_LINK = By.linkText("Play sample application — Computer database");
 
-//    public HomePage(WebDriver webDriver, String baseURL) {
     public HomePage(WebDriver webDriver) {
         super(webDriver);
-//        webDriver.get(baseURL);
     }
 
     public String getComputersFoundText() {
@@ -34,7 +33,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickComputerName(String computer) {
-        getDriver().findElement(By.linkText(computer));
+        getDriver().findElement(By.linkText(computer)).click();
     }
 
     public void searchForComputer(String computer) {
@@ -42,5 +41,9 @@ public class HomePage extends BasePage {
         getDriver().findElement(SEARCH_BOX_INPUT).sendKeys(computer);
         clickFilterByName();
         clickComputerName(computer);
+    }
+
+    public void clickPlayApplicationLink() {
+        getDriver().findElement(PLAY_APPLICATION_LINK).click();
     }
 }
