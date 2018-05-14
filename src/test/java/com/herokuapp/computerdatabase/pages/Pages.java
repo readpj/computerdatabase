@@ -19,7 +19,6 @@ public class Pages {
     }
 
     public HomePage homePage() {
-//        return new HomePage(projectWebDriver.getWebDriver(), baseURL);
         return new HomePage(projectWebDriver.getWebDriver());
     }
 

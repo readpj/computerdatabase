@@ -11,8 +11,6 @@ public class BasePage {
 
     private final WebDriver webDriver;
     private static final int DEFAULT_TIME_OUT = 10;
-
-    protected static final String PAGE_HEADING_IDENTIFIER = ".example>h3";
     private static final String SECTION_HEADING_XPATH = "//h1[contains(text(), '%s')]";
 
     public BasePage(WebDriver driver) {

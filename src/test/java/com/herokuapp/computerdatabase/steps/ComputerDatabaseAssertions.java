@@ -1,12 +1,10 @@
 package com.herokuapp.computerdatabase.steps;
 
 import com.herokuapp.computerdatabase.pages.Pages;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 

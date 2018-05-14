@@ -1,6 +1,5 @@
 package com.herokuapp.computerdatabase;
 
-
 import com.relevantcodes.extentreports.NetworkMode;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;

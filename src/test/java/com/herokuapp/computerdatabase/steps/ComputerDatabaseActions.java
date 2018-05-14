@@ -1,7 +1,6 @@
 package com.herokuapp.computerdatabase.steps;
 
 import com.herokuapp.computerdatabase.pages.Pages;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 
