@@ -17,7 +17,7 @@ public class ComputerDatabaseAssertions {
 
     @Then("^the computer is added to the database$")
     public void theComputerIsAddedToTheDatabase() throws Throwable {
-        assertThat("error message", pages.homePage().getComputerCreatedText(), is("Done! Computer TestPC has been created"));
+        assertThat("Error message", pages.homePage().getComputerCreatedText(), is("Done! Computer TestPC has been created"));
         System.out.println("There are now " + pages.homePage().getComputersFoundText());
 
     }
@@ -67,5 +67,11 @@ public class ComputerDatabaseAssertions {
         pages.homePage().clickPlayApplicationLink();
         System.out.println("There are now " + pages.homePage().getComputersFoundText());
 
+    }
+
+    @Then("^no computers are found$")
+    public void noComputersAreFound() throws Throwable {
+        assertThat("No computers found", pages.homePage().getNothingToDisplayText(), is("Nothing to display"));
+        assertThat("No computers found", pages.homePage().getComputersFoundText(), is("No computers found"));
     }
 }
