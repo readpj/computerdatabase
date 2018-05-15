@@ -16,11 +16,6 @@ public class ComputerDatabaseActions {
         pages.addComputerPage().addComputer("", "test", "test");
     }
 
-    @When("^I search for a computer in the database$")
-    public void iSearchForAComputerInTheDatabase() throws Throwable {
-        pages.homePage().searchForComputer("ASCI White");
-    }
-
     @When("^I add a \"([^\"]*)\" computer with introduced date \"([^\"]*)\" and discontinued date \"([^\"]*)\" to the database$")
     public void
     iAddAComputerWithIntroducedDateAndDiscontinuedDateToTheDatabase(String computer, String introducedDate, String discontinuedDate) throws Throwable {
@@ -39,11 +34,16 @@ public class ComputerDatabaseActions {
     public void iUpdateTheComputerWithNameIntroducedDateDiscontinuedDateAndCompany(String oldComputer, String newComputer, String introducedDate, String discontinuedDate, String company) throws Throwable {
         iAddAComputerWithIntroducedDateAndDiscontinuedDateToTheDatabase("TestPC", "2010-10-30", "2017-02-20");
         pages.homePage().searchForComputer(oldComputer);
-        pages.editComputerPage().updateComputer(newComputer,introducedDate,discontinuedDate,company);
+        pages.editComputerPage().updateComputer(newComputer, introducedDate, discontinuedDate, company);
     }
 
     @When("^I search for computer \"([^\"]*)\" in the database$")
     public void iSearchForComputerInTheDatabase(String computer) throws Throwable {
         pages.homePage().searchForComputer(computer);
+    }
+
+    @When("^I search for the computer \"([^\"]*)\" in the database$")
+    public void iSearchForTheComputerInTheDatabase(String computer) throws Throwable {
+        pages.homePage().filterComputers(computer);
     }
 }

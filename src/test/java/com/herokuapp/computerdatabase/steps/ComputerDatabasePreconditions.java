@@ -33,4 +33,9 @@ public class ComputerDatabasePreconditions {
         pages.homePage().clickPlayApplicationLink();
         System.out.println(pages.homePage().getComputersFoundText() + " and I want to update a computer\n");
     }
+
+    @Given("^I want to check that a computer is not in the database$")
+    public void iWantToCheckThatAComputerIsNotInTheDatabase() throws Throwable {
+        pages.homePage().clickPlayApplicationLink();
+    }
 }
